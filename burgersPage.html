@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript" src="burgerPage.js"></script>
+
+    <link rel="stylesheet"
+     href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+       crossorigin="anonymous">
+       
+</head>
+<body class="body">
+    <br>
+
+    <div class="container col-md-6">
+        <h3 style="text-align: center;">Select your Meal</h3>
+        <hr>
+    </div>
+
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="list-group">
+                <li class="list-gorup-item"> <img src="pictures/Crispy Supreme.jpg" 
+                    class="img-responsive" style="max-height: 65px;"></li>
+            </ul>
+        </div>
+      <div class="col-md-4">
+        <ul class="list-group">
+           <li class="list-group-item"> Crispy Supreme</li>
+        </ul>
+      </div>
+        
+        <div class="col-md-2">
+            <div class="dropdown">
+              <select id="box1" onChange="getCategory(this);" >
+                <option selected="">Category</option>
+                <option value="veg">Veg</option>
+                <option value="nonVeg">Non-veg</option>
+                <option value="ehh">Egg</option>
+              </select>
+              </div>
+              
+
+        </div> 
+        <div class="col-md-4">
+            <input type="number" placeholder="Quantity" min="1" max="5" style="width: 100px;" 
+            id="qCrispy">
+            <button  class="btn btn-primary" id="btn-crispy"
+              onclick="addToCartCrispy('qCrispy')" >Add to Cart</button>
+        </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        <ul class="list-group">
+            <li class="list-gorup-item"> <img src="pictures/Surprise.jpg" 
+                class="img-responsive" style="max-height: 65px;">
+              </li>
+        </ul>
+    </div>
+  <div class="col-md-4">
+    <ul class="list-group">
+       <li class="list-group-item">Surprise</li>
+    </ul>
+  </div>
+    
+    <div class="col-md-2">
+        <div class="dropdown">
+          <select id="category" onChange="getCategory(this);">
+            <option selected="">Category</option>
+            <option value="veg">Veg</option>
+            <option value="nonVeg">Non-veg</option>
+            <option value="ehh">Egg</option>
+          </select>
+          </div>
+          
+
+    </div> 
+    <div class="col-md-4">
+        <input  type="number" placeholder="Quantity" min="1" max="5" style="width: 100px;"
+         id="qsurprise">
+        <button type="submit" class="btn btn-primary" id="btn-surprise"
+       onclick="addToCartSurprise('qsurprise')" >Add to Cart</button>
+    </div>
+
+</div> <div class="row">
+        <div class="col-md-2">
+            <ul class="list-group">
+                <li class="list-gorup-item"> <img src="pictures/WHOPPER.jpg" 
+                    class="img-responsive" style="max-height: 65px;"></li>
+            </ul>
+        </div>
+      <div class="col-md-4">
+        <ul class="list-group">
+           <li class="list-group-item">Whopper</li>
+        </ul>
+      </div>
+        
+        <div class="col-md-2">
+            <div class="dropdown">
+              <select id="category"  onChange="getCategory(this);">
+                <option selected="">Category</option>
+                <option value="veg">Veg</option>
+                <option value="nonVeg">Non-veg</option>
+                <option value="ehh">Egg</option>
+              </select>
+              </div>
+              </div> 
+
+       
+        <div class="col-md-4">
+            <input  type="number" placeholder="Quantity" min="1" max="5" style="width: 100px;"
+             id="qwhopper">
+            <button type="submit" class="btn btn-primary" id="btn-whopper"
+            onclick="addToCartWhopper('qwhopper')">Add to Cart</button>
+        </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2">
+        <ul class="list-group">
+            <li class="list-gorup-item"> <img src="pictures/Chilli Cheese.jpg" 
+                class="img-responsive" style="max-height: 65px;"></li>
+        </ul>
+    </div>
+  <div class="col-md-4">
+    <ul class="list-group">
+       <li class="list-group-item">Chilli Cheese</li>
+    </ul>
+  </div>
+    
+    <div class="col-md-2">
+        <div class="dropdown">
+          <select id="category" onChange="getCategory(this);">
+            <option selected="">Category</option>
+            <option value="veg">Veg</option>
+            <option value="nonVeg">Non-veg</option>
+            <option value="ehh">Egg</option>
+          </select>
+          </div>
+          </div>
+
+    
+    <div class="col-md-4">
+        <input  type="number" placeholder="Quantity" min="1" max="5" style="width: 100px;" 
+        id="qChilliCheese">
+        <button type="submit" class="btn btn-primary" id="btn-chillicheese"
+        onclick="addToCartChilliCheese('qChilliCheese')">Add to Cart</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2">
+        <ul class="list-group">
+            <li class="list-gorup-item"> <img src="pictures/TandoorGrill.jpg" 
+                class="img-responsive" style="max-height: 65px;"></li>
+        </ul>
+    </div>
+  <div class="col-md-4">
+    <ul class="list-group">
+       <li class="list-group-item">Tandoor Grill</li>
+    </ul>
+  </div>
+    
+    <div class="col-md-2">
+        <div class="dropdown">
+          <select id="category" onChange="getCategory(this);">
+            <option selected="">Category</option>
+            <option value="veg">Veg</option>
+            <option value="nonVeg">Non-veg</option>
+            <option value="ehh">Egg</option>
+          </select>
+          </div>
+
+    </div> 
+    <div class="col-md-4">
+        <input  type="number" placeholder="Quantity" min="1" max="5" style="width: 100px;" 
+        id="qTandooriGrill">
+        <button type="submit" class="btn btn-primary" id="btn-tandoori"
+        onclick="addToCartTandooriGrill('qTandooriGrill')">Add to Cart</button>
+    </div>
+     </div>
+     <br>
+</div>
+     <br>
+         <form action="cart.html">
+         <div class=" container col-md-2" style="text-align: center;">
+         <Button class="btn btn-secondary btn-lg btn-block" 
+            onclick="viewCart()"      >
+             View Cart</Button></form>
+         </div>
+     
+ 
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+ integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+ crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+ integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</body>
+
+
+
+
+</html>
